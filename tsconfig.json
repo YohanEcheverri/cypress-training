@@ -1,4 +1,16 @@
 {
+<<<<<<< HEAD
+    "compilerOptions": {
+      "target": "es5",
+      "skipLibCheck": true,
+      "strict": true,
+      "lib": ["es5", "dom"],
+      "types": ["cypress", "node"]
+    },
+    "include": ["cypress/**/*.ts", "cypress.config.ts"],
+    "exclude": ["node_modules/"]
+  }
+=======
   "compilerOptions": {
     "target": "es5",
     "skipLibCheck": true,
@@ -9,3 +21,4 @@
   "include": ["cypress/**/*.ts", "cypress.config.ts"],
   "exclude": ["node_modules/"]
 }
+>>>>>>> e5e04a80fe413b2b7fe33eb5aca98c49776c9987
