@@ -4,7 +4,7 @@
   "description": "This is a Workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open",
+    "test": "cypress run",
     "test:open": "cypress open"
   },
   "keywords": [
@@ -13,5 +13,9 @@
     "cypress"
   ],
   "author": "Yohan Echeverri johan0321@gmail.com https://github.com/YohanEcheverri",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "typescript": "^5.2.2"
+  }
 }
