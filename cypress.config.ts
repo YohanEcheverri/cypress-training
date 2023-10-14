@@ -9,4 +9,8 @@ module.exports = defineConfig({
     defaultCommandTimeout: 20000,
     pageLoadTimeout: 20000,
   },
+  env: {
+    userName:"Yohan Echeverri",
+    password:"johan0321",
+  }
 });
