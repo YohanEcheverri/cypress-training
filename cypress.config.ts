@@ -8,6 +8,17 @@ module.exports = defineConfig({
     baseUrl: "https://www.demoblaze.com",
     defaultCommandTimeout: 20000,
     pageLoadTimeout: 20000,
+    reporter: "cypress-multi-reporters",
+    reporterOptions: {
+      reporterEnabled: "mochawesome",
+      mochawesomeReporterOptions: {
+        reportDir: "cypress/reports/mocha",
+        quite: true,
+        overwrite: false,
+        html: false,
+        json: true,
+    },
+},
   },
   env: {
     userName:"Yohan Echeverri",
