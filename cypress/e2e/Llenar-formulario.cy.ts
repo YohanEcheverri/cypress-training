@@ -9,6 +9,7 @@ describe("Llenar formulario", () => {
   });
 
   it("Llenar el formulario", () => {
+    
     const personalInformation = {
       name: "Holmes",
       lastName: "Salazar",
@@ -23,6 +24,10 @@ describe("Llenar formulario", () => {
     personalFormPage.fillForm(personalInformation);
 
   });
+
+  it("Confirmar el formulario", () => {
+    personalFormPage.verifyForm();
+  })
 
   // Agregar pruebas adicionales aquí, como interactuar con los campos de State y City.
 });

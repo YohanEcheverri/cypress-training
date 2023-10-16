@@ -16,7 +16,7 @@ export class Contact {
     public sendMessage (): void {
         cy.get(this.contactbtn).contains("Contact").click();
         cy.get(this.emalContact).type("johan0321@gmail.com",{force: true});
-        cy.get(this.nameContact).type("Yohan Echeverri");
+        cy.get(this.nameContact).type("Yohan Echeverri",{force: true});
         cy.get(this.menssageContact).type("cordial saludo, hice una compra, muchas gracias");
         cy.get(this.btnSend).contains("Send message").click();
     }

@@ -31,7 +31,6 @@ describe("doin buy", () => {
         cy.get("#month").type("3",{force: true});
         cy.get("#year").type("2023",{force: true});
         cy.get(".btn-primary").contains("Purchase").click();
-        cy.wait(1000)
         cy.get(".btn-primary").contains("OK").click();
 
     });

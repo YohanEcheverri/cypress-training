@@ -1,16 +1,30 @@
-class UploadPage {
-    visitUploadDemoSite() {
-      cy.visit('https://the-internet.herokuapp.com/upload')
-    }
-  
-    uploadFile(fileName: string) {
-      const filePath = `cypress/fixtures/example.json`;
-      cy.get('input[type="file"]').attachFile(filePath);
-    }
-  
-    getUploadedFileName() {
-      return cy.get('#elemento_del_título'); // Reemplaza con el selector adecuado
-    }
+export class UploadPage {
+  private baseUrl: string;
+  private selectUpload: string;
+  private btnUload: string;
+  private confirmFile: string;
+
+  constructor(){
+    this.baseUrl = "https://the-internet.herokuapp.com/upload";
+    this.selectUpload = "input[type=file]";
+    this.btnUload = "#file-submit"
+    this.confirmFile = "#content h3"
+  }
+
+  public visitPage(): void {
+    cy.visit(this.baseUrl);
   }
   
-  export default new UploadPage();
+  public uploadFile(): void {
+    cy.get(this.selectUpload).attachFile("FondoZoom.png")
+  }
+
+  public btnUloadFile(): void {
+    cy.get(this.btnUload).click()
+  }
+
+  public confirmFileName(): void {
+    cy.get(this.confirmFile).should("have.text", "File Uploaded!")
+  }
+
+}
