@@ -56,11 +56,11 @@ export class PersonalFormPage {
         cy.get(this.submitBtn).submit();
      }
 
-     public selectState(): void {
-     }
+   //   public selectState(): void {
+   //   }
 
-     public selectCity(): void {
-     }
+   //   public selectCity(): void {
+   //   }
 
      public verifyForm(): void {
         cy.get(this.confirmForm).contains("Thanks for submitting the form")

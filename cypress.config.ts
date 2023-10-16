@@ -5,7 +5,7 @@ module.exports = defineConfig({
     video: false,
     screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {},
-    baseUrl: "https://www.demoblaze.com",
+    // baseUrl: "https://www.demoblaze.com",
     defaultCommandTimeout: 20000,
     pageLoadTimeout: 20000,
     reporter: "cypress-multi-reporters",
@@ -24,4 +24,5 @@ module.exports = defineConfig({
     userName:"Yohan Echeverri",
     password:"johan0321",
   }
+  
 });

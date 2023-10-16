@@ -8,7 +8,7 @@ export class DownloadImage {
     constructor() {
         this.baseUrl = "https://demoqa.com/upload-download"
         this.btnDownload = "#downloadButton"
-        this.verifydownload = "cypress/downloads/sampleFile.jpeg"
+        this.verifydownload = "./cypress/downloads/sampleFile.jpeg"
         // this.verifyFile = "\sampleFile.jpeg"
     }
 

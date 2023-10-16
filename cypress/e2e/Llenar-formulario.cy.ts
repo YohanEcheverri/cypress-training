@@ -22,12 +22,9 @@ describe("Llenar formulario", () => {
     };
 
     personalFormPage.fillForm(personalInformation);
+    personalFormPage.verifyForm();
 
   });
-
-  it("Confirmar el formulario", () => {
-    personalFormPage.verifyForm();
-  })
 
   // Agregar pruebas adicionales aquí, como interactuar con los campos de State y City.
 });
