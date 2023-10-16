@@ -2,6 +2,7 @@ export class IframePage {
     private baseUrl: string;
     private titlePage: string;
     private cssNav: string;
+    private iframe: string;
 
 
 
@@ -9,27 +10,32 @@ export class IframePage {
 
     constructor() {
         this.baseUrl = "https://www.w3schools.com/html/html_iframe.asp"
-        this.titlePage = "#mainLeaderboard h1"
+        this.titlePage = "#main h1"
         this.cssNav = ".ga-nav"
+        this.iframe = "iframe[src='default.asp']"
     }
 
     public visit(): void {
-        cy.frameLoaded({ url: this.baseUrl })
-        // cy.visit(this.baseUrl);
+        cy.visit(this.baseUrl);
+        cy.frameLoaded(this.iframe);
 
       }
       
     public getFrameTitle(){
-        cy.iframe(this.titlePage).contains("HTML Tutorial").should("be.visible")
+        // cy.enter().title().should("have.text", "HTML Tutorial")
+
+    
+        cy.iframe(this.iframe).find(this.titlePage).should("have.text", "HTML Tutorial");
+  
+  
         // cy.get(this.titlePage).title(). should("eq", "HTML Tutorial")
         // get the title of the page in the iframe
       }
       
-//     public goToCssPageInFrame(){
+    public goToCssPageInFrame(){
 
-//         cy.get(this.cssNav).title(). should("eq", "CSS Tutorial").click()
-//         // navigate to the css page in the iframe
-//       }
+        cy.iframe(this.iframe).contains(this.cssNav,"CSS").should("be.visible")
+      }
 }
 
 
