@@ -197,5 +197,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 # imagen
-*.jpeg
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,node,cypressio,visualstudiocode
