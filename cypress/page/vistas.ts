@@ -1,6 +1,4 @@
-import { ContainsClick } from "./clicks";
-
-export class Vistas extends ContainsClick {
+export class Vistas  {
     
     private logInBtn: string;
     private loginUser: string;
@@ -8,16 +6,22 @@ export class Vistas extends ContainsClick {
     private menuContentPageURL: string;
     private btnPrimary: string;
     private logInText: string;
+    private nameUser: string;
 
     constructor() {
-        super()
-        this.menuContentPageURL = "https://www.demoblaze.com/index.html/"
-        this.logInBtn = "login2"
+
+        this.menuContentPageURL = "https://www.demoblaze.com"
+        this.logInBtn = "#login2"
         this.loginUser = "#loginusername";
-        this.loginPasswod = "johan0321"
+        this.loginPasswod = "#loginpassword"
         this.btnPrimary = ".btn-primary";
         this.logInText = "Log in";
+        this.nameUser = "#nameofuser"
         
+    }
+
+    public visitMenuContentPage(): void {
+        cy.visit(this.menuContentPageURL)
     }
 
     public logInClick(): void {
@@ -31,10 +35,11 @@ export class Vistas extends ContainsClick {
     }
     
     public idBtnPrimary(): void {
-        this.clickBtn(this.btnPrimary, this.logInText)
+        cy.get(".btn-primary").contains("Log in").click();
     }
-    public visitMenuContentPage(): void {
-        cy.visit(this.menuContentPageURL)
+    
+    public validatingUser(): void {
+        cy.get(this.nameUser).should("have.text","Welcome Yohan Echeverri");
     }
 
 }

@@ -3,3 +3,4 @@ export class ContainsClick  {
         cy.get(id).contains(name).click();
     }
 }
+

@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Import commands.js using ES2015 syntax:
+import './commands';
+
+import 'cypress-file-upload';
