@@ -21,7 +21,7 @@ export class DownloadImage {
     }
 
     public verifyDownloadFile(): void {
-        cy.readFile(this.verifydownload);
+        cy.readFile(this.verifydownload).should("exist");
 
     }
 
